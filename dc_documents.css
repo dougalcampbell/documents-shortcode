@@ -1,0 +1,63 @@
+/* Document styles for the documents-shortcode plugin: */
+ul.dc_documents li {
+	line-height: 32px;
+	list-style: none;
+	display: block;
+}
+
+ul.dc_documents li a {
+	background-position: top left;
+	line-height: 32px;
+	background-repeat: no-repeat;
+	display: inline-block;
+	padding-left: 36px;
+	text-decoration: none;
+}
+
+ul.dc_documents li a:hover {
+	text-decoration: underline;
+}
+
+ul.dc_documents {
+	list-style: none;
+	list-style-type: none;
+}
+
+ul.dc_documents li a {
+	background-image: url(images/page_white_text.png);
+}
+
+ul.dc_documents li.pdf a { 
+	background-image: url(images/page_white_acrobat.png);
+}
+
+ul.dc_documents li.doc a, 
+ul.dc_documents li.docx a { 
+	background-image: url(images/page_white_word.png);
+}
+
+ul.dc_documents li.xls a, 
+ul.dc_documents li.xlsx a { 
+	background-image: url(images/page_white_excel.png);
+}
+
+ul.dc_documents li.ppt a, 
+ul.dc_documents li.pptx a { 
+	background-image: url(images/page_white_powerpoint.png);
+}
+
+ul.dc_documents li.vsd a, 
+ul.dc_documents li.vsdx a {
+	background-image: url(images/page_white_vector.png);
+}
+
+ul.dc_documents li.mdb a,
+ul.dc_documents li.mdbx a {
+	background-image: url(images/page_white_database.png);
+}
+
+ul.dc_documents li.zip a {
+	background-image: url(images/page_white_zip.png);
+}
+
+
