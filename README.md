@@ -1,12 +1,12 @@
 # Documents Shortcode
-Contributors: dougal
-Donate link: http://dougal.gunters.org/donate
-Tags: documents, shortcode, documents shortcode, shortcode-only, files, attachments, pdf, word, excel, spreadsheet, text
-Requires at least: 2.5
-Tested up to: 3.4.2
-Stable tag: 1.0
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Contributors: dougal  
+Donate link: http://dougal.gunters.org/donate  
+Tags: documents, shortcode, documents shortcode, shortcode-only, files, attachments, pdf, word, excel, spreadsheet, text  
+Requires at least: 2.5  
+Tested up to: 3.4.2  
+Stable tag: 1.0  
+License: GPLv2 or later  
+License URI: http://www.gnu.org/licenses/gpl-2.0.html  
 
 A `[documents]` shortcode which will display a list of attached files, with file type icons, and linked to the files for easy downloading.
 
