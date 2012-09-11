@@ -43,20 +43,20 @@ need to specifically override that attribute.
 
 Examples:
 
-    Just .XLS files:
-      `[documents ext="xls"]`
+> Just .XLS files:
+>   `[documents ext="xls"]`
 
-    All .DOC, .DOCX, or .PDF files:
-      `[documents ext="doc,docx,pdf"]`
+> All .DOC, .DOCX, or .PDF files:
+>   `[documents ext="doc,docx,pdf"]`
 
-    Only 'video' types with a .MOV extension:
-      `[documents mimetype="video" ext="mov"]`
+> Only 'video' types with a .MOV extension:
+>   `[documents mimetype="video" ext="mov"]`
 
-    Just application/pdf mimetypes:
-      `[documents mimetype="application/pdf"]`
+> Just application/pdf mimetypes:
+>   `[documents mimetype="application/pdf"]`
 
-    All attached documents, regardless of type:
-      `[documents mimetype="*"]`
+> All attached documents, regardless of type:
+>   `[documents mimetype="*"]`
 
 ### I got an error trying to upload a file!
 
@@ -65,9 +65,9 @@ this file type is not permitted for security reasons."), you may need to
 adjust the list of allowed file extensions. For more information on how to do 
 this, see: 
 
-    http://wordpress.org/extend/plugins/ap-extended-mime-types/
-    http://wordpress.org/extend/plugins/manage-upload-types/
-    http://www.wprecipes.com/wordpress-tip-allow-upload-of-more-file-types
+> http://wordpress.org/extend/plugins/ap-extended-mime-types/
+> http://wordpress.org/extend/plugins/manage-upload-types/
+> http://www.wprecipes.com/wordpress-tip-allow-upload-of-more-file-types
 
 ### How do I change the styling?
 
@@ -78,7 +78,7 @@ You can override these styles in your theme's CSS by adding more specific
 selectors. For example, you could change the font used for the file titles in 
 posts with a rule similar to this:
 
-    `.post ul.dc_documents li a { font-family: Courier,monospace; }`
+> `.post ul.dc_documents li a { font-family: Courier,monospace; }`
 
 ### Why don't my attached images appear in the documents list?
 
@@ -86,7 +86,7 @@ By default, images are filtered out of the list (because, that's what
 galleries are for, right?). If you want to list *all* attached documents, 
 with no filtering, just say so:
 
-    `[documents mimetype="*"]`
+> `[documents mimetype="*"]`
 
 ### What file types are supported?
 
@@ -94,13 +94,13 @@ with no filtering, just say so:
 attachment (see above). More specifically, there are icons included for the 
 following types of files:
 
-    PDF: `.pdf`
-    MS Word: `.doc`, `.docx`
-    MS Excel: `.xls`, `.xlsx`
-    MS PowerPoint: `.ppt`, `.pptx`
-    MS Visio Diagrams: `.vsd`, `.vsdx`
-    MS Access Database: `.mdb`, `.mdbx`
-    ZIP: `.zip`
+> PDF: `.pdf`
+> MS Word: `.doc`, `.docx`
+> MS Excel: `.xls`, `.xlsx`
+> MS PowerPoint: `.ppt`, `.pptx`
+> MS Visio Diagrams: `.vsd`, `.vsdx`
+> MS Access Database: `.mdb`, `.mdbx`
+> ZIP: `.zip`
 
 Any other extension will display a generic text document icon. I realize this 
 list is slanted towards Microsoft applications, but that's just due to the 
