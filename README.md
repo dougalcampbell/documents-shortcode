@@ -43,19 +43,19 @@ need to specifically override that attribute.
 
 Examples:
 
-> Just .XLS files:
+> Just .XLS files:  
 >   `[documents ext="xls"]`
 
-> All .DOC, .DOCX, or .PDF files:
+> All .DOC, .DOCX, or .PDF files:  
 >   `[documents ext="doc,docx,pdf"]`
 
-> Only 'video' types with a .MOV extension:
+> Only 'video' types with a .MOV extension:  
 >   `[documents mimetype="video" ext="mov"]`
 
-> Just application/pdf mimetypes:
+> Just application/pdf mimetypes:  
 >   `[documents mimetype="application/pdf"]`
 
-> All attached documents, regardless of type:
+> All attached documents, regardless of type:  
 >   `[documents mimetype="*"]`
 
 ### I got an error trying to upload a file!
@@ -65,8 +65,8 @@ this file type is not permitted for security reasons."), you may need to
 adjust the list of allowed file extensions. For more information on how to do 
 this, see: 
 
-> http://wordpress.org/extend/plugins/ap-extended-mime-types/
-> http://wordpress.org/extend/plugins/manage-upload-types/
+> http://wordpress.org/extend/plugins/ap-extended-mime-types/  
+> http://wordpress.org/extend/plugins/manage-upload-types/  
 > http://www.wprecipes.com/wordpress-tip-allow-upload-of-more-file-types
 
 ### How do I change the styling?
@@ -94,13 +94,13 @@ with no filtering, just say so:
 attachment (see above). More specifically, there are icons included for the 
 following types of files:
 
-> PDF: `.pdf`
-> MS Word: `.doc`, `.docx`
-> MS Excel: `.xls`, `.xlsx`
-> MS PowerPoint: `.ppt`, `.pptx`
-> MS Visio Diagrams: `.vsd`, `.vsdx`
-> MS Access Database: `.mdb`, `.mdbx`
-> ZIP: `.zip`
+> PDF: `.pdf`  
+> MS Word: `.doc`, `.docx`  
+> MS Excel: `.xls`, `.xlsx`  
+> MS PowerPoint: `.ppt`, `.pptx`  
+> MS Visio Diagrams: `.vsd`, `.vsdx`  
+> MS Access Database: `.mdb`, `.mdbx`  
+> ZIP: `.zip`  
 
 Any other extension will display a generic text document icon. I realize this 
 list is slanted towards Microsoft applications, but that's just due to the 
