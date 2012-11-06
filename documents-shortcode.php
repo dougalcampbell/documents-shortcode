@@ -4,7 +4,7 @@ Plugin Name: Document Shortcode
 Plugin URI: http://dougal.gunters.org/
 Description: Shortcode to display a list of attached documents, optionally filtered by mime-type and/or file extension.
 Author: Dougal Campbell
-Version: 1.0
+Version: 1.0.1
 Min WP Version: 2.5
 Author URI: http://dougal.gunters.org/
 */
@@ -89,7 +89,9 @@ function dc_document_shortcode_add_style() {
 	// Don't need plugin styles in dashboard
 	if ( is_admin() ) return;
 	
-	wp_register_style( 'dc_document_shortcode' , plugins_url( 'dc_documents.css', __FILE__ ) );
+	$css_url = apply_filters( 'dc_document_shortcode_css_url', plugins_url( 'dc_documents.css', __FILE__ ) );
+	
+	wp_register_style( 'dc_document_shortcode' , $css_url );
 	wp_enqueue_style( 'dc_document_shortcode' );
 }
 

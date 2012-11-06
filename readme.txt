@@ -112,6 +112,9 @@ future, and I am open to suggestions.
 At this time, the only supported icon size is 32 x 32 pixels. 
 
 == Changelog ==
+= 1.0.1=
+* Allow CSS URL to be filtered.
+
 = 1.0 =
 * Initial release. 2012-09-10
 
