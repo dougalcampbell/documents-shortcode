@@ -4,7 +4,7 @@ Donate link: http://dougal.gunters.org/donate
 Tags: documents, shortcode, documents shortcode, shortcode-only, files, attachments, pdf, word, excel, spreadsheet, text
 Requires at least: 2.5
 Tested up to: 3.4.2
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,10 +54,14 @@ Examples:
 
     Just application/pdf mimetypes:
       `[documents mimetype="application/pdf"]`
+    
 
     All attached documents, regardless of type:
       `[documents mimetype="*"]`
 
+    Just application/pdf mimetypes sorted by menu order ascending:
+      `[documents mimetype="application/pdf" orderby="menu_order" order="ASC"]` 
+      
 = I got an error trying to upload a file! =
 
 If WordPress tells you that a file failed to upload due to an error ("Sorry, 
@@ -112,6 +116,10 @@ future, and I am open to suggestions.
 At this time, the only supported icon size is 32 x 32 pixels. 
 
 == Changelog ==
+
+= 1.0.2=
+* Added attributes for orderby and order
+
 = 1.0.1=
 * Allow CSS URL to be filtered.
 

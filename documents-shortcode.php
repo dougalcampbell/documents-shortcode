@@ -4,7 +4,7 @@ Plugin Name: Document Shortcode
 Plugin URI: http://dougal.gunters.org/
 Description: Shortcode to display a list of attached documents, optionally filtered by mime-type and/or file extension.
 Author: Dougal Campbell
-Version: 1.0.1
+Version: 1.0.2
 Min WP Version: 2.5
 Author URI: http://dougal.gunters.org/
 */
@@ -19,49 +19,54 @@ Author URI: http://dougal.gunters.org/
  *
  * All .DOC, .DOCX, or .PDF files:
  *   [documents ext="doc,docx,pdf"]
- * 
+ *
  * Only 'video' types with a .MOV extension:
  *   [documents mimetype="video" ext="mov"]
- * 
+ *
  * Just application/pdf mimetypes:
  *   [documents mimetype="application/pdf"]
+ *
+ * Just application/pdf mimetypes sorted by menu order descending:
+ *   [documents mimetype="application/pdf" orderby="menu_order" order="DESC"]
  */
 function dc_document_shortcode($atts) {
 	extract(shortcode_atts(array(
 		'mimetype' => 'application',
 		'ext' => null,
+		'orderby' => 'post_date',
+		'order' => 'DESC'
 	), $atts));
-	
-	$mime = "&post_mime_type=$mimetype";
-	
+
+	$mime = "&post_mime_type=$mimetype&orderby=$orderby&order=$order";
+
 	$kids =& get_children( 'post_type=attachment&post_parent=' . get_the_id() . $mime );
 
 	if ( empty( $kids ) ) {
 		return '';
 	}
-	
+
 	$exts = array();
-	
+
 	if ( $ext ) {
 		$exts = explode(',', $ext);
 		$exts = array_map('trim', $exts);
 		$exts = array_map('strtolower', $exts);
 	}
-	
+
 	$documents = '';
-	
+
 	foreach ( $kids as $id => $doc ) {
 		$url = wp_get_attachment_url( $id );
-		
+
 		$file = get_attached_file( $id );
 		$filetype = wp_check_filetype( $file );
 		$file_ext = strtolower($filetype['ext']);
-		
+
 		if ( count($exts) && ! in_array($file_ext, $exts) ) {
 			// Not in list of requested extensions. Skip it!
 			continue;
 		}
-		
+
 		$name = $doc->post_title;
 		$mime = sanitize_title_with_dashes( $file_ext );
 		$documents .= "<li class='$mime'><a href='$url'>$name</a></li>\n";
@@ -88,9 +93,9 @@ add_action( 'init', 'dc_document_shortcode_init' );
 function dc_document_shortcode_add_style() {
 	// Don't need plugin styles in dashboard
 	if ( is_admin() ) return;
-	
+
 	$css_url = apply_filters( 'dc_document_shortcode_css_url', plugins_url( 'dc_documents.css', __FILE__ ) );
-	
+
 	wp_register_style( 'dc_document_shortcode' , $css_url );
 	wp_enqueue_style( 'dc_document_shortcode' );
 }
